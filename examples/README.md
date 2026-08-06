@@ -1,6 +1,6 @@
 # Example and Acceptance Cases
 
-These cases are intended for manual testing. Every test requires a source image.
+These cases are intended for public manual testing. Every test requires a source image.
 
 All successful results must satisfy three conditions simultaneously:
 
@@ -8,26 +8,7 @@ All successful results must satisfy three conditions simultaneously:
 2. the pastoral low-poly storybook style is strong and immediate
 3. the goose has physically plausible scale, support, perspective, lighting, and occlusion
 
-## 1. Desk, drink, and cat
-
-**Request**
-
-```text
-用 $goose-of-mischief 改造这张图片，保留原本构图，并自动判断鹅应该有多明显。
-```
-
-**Expected behavior**
-
-- Preserve the foreground drink, desk, cable, background cat, cabinets, and camera.
-- Reconstruct the scene using clean object-level low-poly forms and matte flat-painted materials.
-- Do not cover the image with a triangular polygon mosaic.
-- Preserve the cat as the primary animal subject.
-- Use at least two scale anchors, such as the cat, glass, cable connector, cabinet, or tabletop depth.
-- Do not place a full adult goose on the tabletop unless the available surface and perspective can physically support it.
-- Prefer a correctly scaled goose farther back, partly hidden behind the glass or furniture, entering from the lower edge, or extending only its head and neck toward the cable.
-- Visibility may be subtle or medium, but must not be produced by enlarging the goose.
-
-## 2. Wide garden scene
+## 1. Wide garden scene
 
 **Request**
 
@@ -44,7 +25,7 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 - Use an existing garden object such as a glove, watering can, hose, flower, or small tool.
 - Match the ground plane and cast a soft contact shadow.
 
-## 3. Close portrait
+## 2. Close portrait
 
 **Request**
 
@@ -61,7 +42,7 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 - Do not shrink a full goose onto a shoulder, narrow table, or tiny shelf.
 - Use placement and partial occlusion—not toy scale—to keep the goose subtle.
 
-## 4. Pet photo
+## 3. Pet photo
 
 **Request**
 
@@ -78,7 +59,7 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 - Let the goose move a toy, blanket corner, leash, cable, or another safe existing prop.
 - Keep the interaction playful and non-distressing.
 
-## 5. Product image
+## 4. Product image
 
 **Request**
 
@@ -95,7 +76,7 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 - If the surface cannot fit a real goose, show only a partially hidden or edge-entering goose.
 - Never shrink a full goose into a decorative tabletop toy.
 
-## 6. Dense city or travel scene
+## 5. Dense city or travel scene
 
 **Request**
 
@@ -112,7 +93,7 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 - A small background goose is acceptable only because it is distant.
 - Do not create traffic danger or a new crowd reaction.
 
-## 7. Food image
+## 6. Food image
 
 **Request**
 
@@ -128,7 +109,7 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 - Use a correctly scaled goose on the floor, in the background, partly behind a table edge, or entering with only its head and neck.
 - Let it reach toward a napkin, spoon, or loose safe prop without contaminating the food.
 
-## 8. Text-heavy poster, screen, or interface
+## 7. Text-heavy poster, screen, or interface
 
 **Request**
 
