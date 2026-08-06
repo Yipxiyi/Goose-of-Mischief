@@ -1,52 +1,17 @@
-# Paired Transformation Examples
+# Visual Examples
 
-Each approved case should use its own folder:
+Place a small set of approved reference images in this directory.
 
-```text
-assets/examples/case-01/
-├── source.jpg
-├── result.png
-└── meta.yaml
-```
+Recommended:
 
-## Required metadata
+- 4–8 strong final outputs
+- varied scene types such as people, pets, interiors, products, streets, and landscapes
+- consistent pastoral low-poly storybook rendering
+- physically plausible goose scale, support, lighting, shadow, and occlusion
+- a mix of obvious, subtle, and hidden goose placements
 
-```yaml
-id: case-01
-scene_type: indoor | outdoor | portrait | pet | product | travel | food | text-heavy
-goose_visibility: obvious | subtle | hidden
-source_license: original | generated | public-domain | licensed
-composition_facts:
-  - ""
-protected_regions:
-  - ""
-scale_anchors:
-  - ""
-  - ""
-support_surface: ""
-goose_action: ""
-learn:
-  - ""
-do_not_copy:
-  - source subjects
-  - exact composition
-  - exact palette
-  - exact prank
-```
+The skill may inspect one to three relevant images before generating.
 
-## Recommended set
+These images are visual references only. Do not copy their subjects, exact composition, colors, props, or prank.
 
-Maintain four to six high-quality pairs covering different source conditions rather than many mediocre examples.
-
-At minimum include:
-
-1. an open scene where a complete goose fits naturally
-2. a dense scene using partial occlusion or distance
-3. a portrait or pet photo where the primary subject remains dominant
-4. a product or text-heavy image with protected regions
-
-## Acceptance
-
-Do not add a result until it passes all style, composition, physical-scale, and goose-integration checks in `SKILL.md`.
-
-Source and result images are visual references only. They must not become templates whose subjects, arrangement, or color palette are copied into unrelated user images.
+Use only original, purpose-generated, public-domain, or properly licensed images. Do not add private photographs or commercial-game screenshots.
