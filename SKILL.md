@@ -1,352 +1,437 @@
 ---
 name: goose-of-mischief
-description: Transform a user-supplied image into an original pastoral low-poly storybook rendering while preserving its composition, subjects, camera, and scene identity, then integrate one white goose performing a context-aware harmless act of mischief. The goose may be prominent, subtle, or hidden depending on the source composition and the user's instruction.
+description: Transform a user-supplied image into a strongly recognizable pastoral low-poly storybook scene inspired by the broad visual language of Untitled Goose Game, while preserving the source composition and scene identity. Integrate exactly one mischievous white goose at a physically plausible real-world scale, with correct perspective, support surface, lighting, shadow, and occlusion. Goose visibility may be obvious, subtle, or hidden, but must never be achieved through unrealistic enlargement.
 ---
 
 # Goose of Mischief
 
-Transform an existing user image into a gentle pastoral low-poly storybook scene and insert exactly one mischievous goose into the original composition.
+Transform one uploaded image into a **strongly stylized pastoral low-poly storybook scene** and integrate **exactly one mischievous goose** into the original composition.
 
-This is an **image-to-image editing skill**. A usable source image is required. If no image is available in the current conversation, ask the user to upload one before generating anything.
+A usable source image is required. If no image is available in the current conversation, ask the user to upload one before generating anything.
 
-The skill defines an original visual language: simplified softly faceted geometry, matte painted surfaces, restrained colors, soft ambient light, broad vegetation forms, and dry physical comedy. It must not reproduce a commercial game's exact map, character design, logo, interface, screenshot, level layout, or branded prop arrangement.
+The visual result should clearly evoke the broad qualities associated with *Untitled Goose Game*: simplified low-poly forms, matte flat-painted surfaces, gentle countryside colors, soft ambient light, faceless human figures, readable silhouettes, uncluttered staging, and dry physical comedy.
+
+The style must be unmistakable. It must not look like a lightly filtered photograph.
+
+However, do not reproduce a commercial game's exact map, character mesh, level layout, prop arrangement, logo, title treatment, UI, task list, or screenshot.
 
 ## Core Contract
 
-Every successful transformation must satisfy both requirements:
+Every successful transformation must satisfy all four requirements:
 
-1. **Preserve the source image.** Keep its primary subjects, approximate subject count, framing, camera angle, perspective, spatial relationships, major color identity, and overall scene meaning recognizable.
-2. **Add one mischievous goose.** Integrate exactly one white goose performing a small, readable, harmless act of mischief that belongs naturally in the source scene.
+1. **Preserve the source composition.** Keep its crop, camera, perspective, primary subject placement, spatial relationships, focal hierarchy, and scene meaning recognizable.
+2. **Apply a strong global style reconstruction.** Rebuild the whole image using clean pastoral low-poly storybook geometry and matte flat-shaded materials.
+3. **Insert exactly one mischievous goose.** The goose performs one harmless, context-aware prank using the existing scene whenever possible.
+4. **Maintain physical plausibility.** The goose must have believable real-world size, depth, support, lighting, contact shadow, and occlusion.
 
-Style transformation is global. Goose insertion is local.
+Composition is locked. Style is global. Goose insertion is local.
 
-Do not redesign the entire composition merely to make room for the goose. Prefer a clever placement that uses existing negative space, depth layers, props, paths, furniture, clothing, reflections, or architectural edges.
+## Required Method
 
-## Source-Image Preservation Rules
+Use this internal sequence:
 
-Before editing, build a concise internal inventory of the source image:
+**DECONSTRUCT → SELECTIVE PRESERVATION → STYLE RECONSTRUCTION → GOOSE INTEGRATION → QUALITY GATE**
 
-- primary subject or focal group
-- secondary subjects
-- people and animal count
-- dominant poses and actions
-- camera angle, crop, horizon, and perspective
+### 1. Deconstruct
+
+Identify three to six decisive visual facts from the source image:
+
+- primary and secondary subjects
+- relative scale
+- dominant horizontal, vertical, or diagonal axes
 - foreground, middle-ground, and background layers
-- important text, logos, screens, signs, or product labels
-- key colors and identity cues
-- available negative space
-- objects that could support a harmless prank
+- overlap and occlusion relationships
+- visual intervals and negative space
+- light direction and shadow softness
+- key source colors and accent colors
+- protected faces, labels, screens, text, or focal objects
 
-Preserve by default:
+### 2. Selective Preservation
 
-- the original aspect ratio and crop
-- the source camera and perspective
-- primary subject placement and scale
-- recognizable clothing colors, hairstyle silhouette, accessories, species, vehicle type, architecture, and major props
-- existing object relationships and scene topology
-- the emotional tone, unless the goose's local prank adds a small comic counterpoint
+Preserve the relationships that make the source image recognizable:
 
-Allow only local changes around the goose's interaction zone. Do not move, remove, replace, or duplicate major source subjects unless explicitly requested.
+- subject count and identity
+- primary poses and gestures
+- camera angle, crop, and perspective
+- relative placement and depth
+- recognizable color cues
+- scene topology and object relationships
 
-## Visual Style Translation
+Remove or simplify only high-frequency photographic detail, surface noise, tiny decorations, realistic texture, and unnecessary background clutter.
 
-Apply the following rendering language to the whole image.
+### 3. Style Reconstruction
 
-### Geometry and Materials
+Reconstruct—not merely filter—the image using the mandatory visual language below.
 
-- simplified low-poly or softly faceted forms
-- softened edges and slightly chunky proportions
-- clean, readable silhouettes
+### 4. Goose Integration
+
+Choose a plausible depth plane, support surface, scale anchors, placement, occlusion, and one harmless prank.
+
+### 5. Quality Gate
+
+Reject and regenerate once if the style is weak, the composition drifts, or the goose has incorrect scale or pasted-on appearance.
+
+## Mandatory Visual Language
+
+### Object-Level Low-Poly Reconstruction
+
+Use:
+
+- simplified low-poly or softly faceted **object geometry**
+- broad, clean color planes
+- softened chunky proportions
+- clear silhouettes readable at thumbnail size
 - matte, chalky, hand-painted surfaces
-- minimal high-frequency texture
-- subtle handcrafted irregularity
-- vegetation represented as broad clustered masses rather than individual leaves
-- architecture and props reduced to clear volumes without losing their category or function
-- no photoreal micro-detail
+- minimal texture maps and minimal micro-detail
+- simplified architecture and props that retain their function
+- vegetation as broad clustered masses rather than individual leaves
+- quiet, carefully separated scene elements
+
+The transformation must feel like a purpose-built low-poly storybook world.
+
+### Critical Anti-Filter Rule
+
+Do **not** create a uniform triangular mosaic over the photograph.
+
+Avoid:
+
+- visible triangular facets covering every surface equally
+- stained-glass polygon filters
+- crystalline or origami-like fragmentation
+- photo-to-vector posterization without object reconstruction
+- keeping realistic photography underneath a transparent polygon texture
+
+Low-poly style must come from simplified modeled forms, silhouettes, materials, and lighting—not from overlaying triangles on the original pixels.
 
 ### Palette
 
-Derive the palette from the source image, then harmonize it into restrained families:
+Derive key colors from the source, then harmonize them into a restrained pastoral storybook palette.
+
+Preferred families:
 
 - warm off-white
-- sage, moss, and muted grass green
+- muted cream
+- sage, moss, and soft grass green
 - stone beige
 - pale gray-blue
 - weathered wood brown
+- muted terracotta
+- dusty orange
+- brick red
+- mustard yellow
 - soft charcoal used sparingly
-
-Use source-specific accents when important, such as brick red, mustard yellow, dusty orange, faded cobalt, terracotta, or pale lavender.
 
 Rules:
 
-- preserve essential subject colors and visual identity
-- slightly reduce excessive saturation
-- use one or two controlled accents
-- avoid neon, glossy gradients, black-heavy grading, or commercial color blocking
+- retain important source color identity
+- reduce excessive saturation and visual noise
+- use a small number of broad color roles
+- keep one or two source-derived accents
+- avoid neon, glossy gradients, black-heavy grading, and cinematic teal-orange treatment
+
+The palette should strongly support the pastoral storybook feeling without replacing every setting with a generic British village.
 
 ### Lighting
 
-- broad ambient illumination
-- soft overcast daylight or calm morning/afternoon light
-- short, soft-edged contact shadows
+Use:
+
+- broad ambient daylight
+- soft overcast, morning, or calm afternoon illumination
 - low-to-medium contrast
+- short, soft-edged contact shadows
 - gentle atmospheric softness
-- no dramatic rim lighting, hard spotlight, volumetric beam, heavy bloom, or cinematic color grade
+- little or no specular shine
 
-### People and Other Animals
+Avoid:
 
-When people are present:
+- dramatic rim lights
+- hard spotlights
+- volumetric beams
+- strong bloom
+- ray-traced glossy realism
+- cinematic depth-of-field effects
 
-- preserve their number, placement, pose, clothing silhouette, skin-tone family, and important accessories
-- simplify faces into anonymous storybook forms with little or no facial anatomy
-- preserve identity through pose, clothing, hair silhouette, and context rather than detailed facial features
-- do not add new people merely to react to the goose
+### Camera
 
-When other animals are present:
+Preserve the source camera, crop, and perspective by default.
 
-- preserve their species, count, approximate anatomy, markings, pose, and relationship to the scene
-- simplify fur, feathers, scales, and patterns into broad matte regions
-- never convert another animal into the goose
+Do not force every image into an elevated isometric or three-quarter diorama view. The visual style should change strongly while the original composition remains recognizable.
+
+### People
+
+When people already exist:
+
+- preserve their number, placement, pose, clothing silhouette, and important accessories
+- simplify them into anonymous faceless storybook figures
+- use blank face planes, tiny minimal marks, or no visible features
+- communicate emotion through posture, hands, head angle, and spacing
+- do not add new villagers merely to react to the goose
+
+### Other Animals
+
+When pets or other animals already exist:
+
+- preserve species, count, markings, pose, and primary-subject status
+- simplify fur, feathers, and patterns into broad matte regions
+- never replace another animal with the goose
+- avoid aggression or distress
 
 ## Mandatory Goose Design
 
-Insert exactly one goose unless the user explicitly requests multiple geese.
+Insert exactly one goose unless the user explicitly requests more.
 
-Default goose design:
+Default goose:
 
-- smooth simplified white body
-- curved neck with a readable S-shape or forward-reaching gesture
+- white body made from clean simplified volumes
+- long curved neck
 - flat orange beak
 - orange webbed feet
 - one tiny dark eye when visible
-- clean silhouette readable at thumbnail size
-- proportions consistent with the scene's scale and perspective
-- matte surface matching the transformed scene
+- matte material consistent with the scene
+- readable silhouette
+- anatomically plausible domestic-goose proportions
 
 Avoid:
 
 - realistic feather detail
-- human facial expressions
-- costumes, eyelashes, hands, human teeth, or anthropomorphic anatomy
-- giant mascot scale unless explicitly requested
-- exact replication of a protected commercial goose model
+- mascot proportions
+- toy scale
+- giant monster scale
+- human expressions, eyelashes, hands, teeth, clothes, or anthropomorphic anatomy
+- exact replication of a protected commercial character mesh
 
-## Goose Placement Engine
+## Physical Scale Engine — Hard Constraint
 
-Choose the goose's placement and visibility from the source composition rather than using a fixed layout.
+Do not size the goose using a percentage of the image dimensions.
 
-### Step 1: Protect the Focal Area
+Image-space size is not physical scale.
 
-The goose must not cover:
+Before placing the goose, determine internally:
 
-- a person's face or essential body gesture
-- the primary product or artwork
-- important readable text or UI
-- a key landmark, vehicle, animal, or object
-- the central relationship that defines the original image
+```yaml
+goose_depth_plane: foreground | middle-ground | background
+goose_support_surface: floor | ground | tabletop | path | shelf | water | other
+goose_scale_anchor_1: ""
+goose_scale_anchor_2: ""
+goose_full_body_fits: yes/no
+goose_occlusion_plan: ""
+```
 
-### Step 2: Find a Natural Entry Point
+### Scale Anchoring
 
-Prefer, in order:
+Estimate goose size using at least two nearby source objects with understandable real-world scale, such as:
 
-1. existing negative space near a useful prop
-2. foreground or middle-ground floor area
-3. a path, doorway, table edge, shelf, garden border, curb, or shoreline
-4. partial occlusion behind furniture, plants, bags, boxes, fences, or architecture
-5. a distant background location
-6. a tiny edge-of-frame appearance when the composition is dense
+- a cat or dog
+- chair seat or chair leg
+- table height and tabletop depth
+- cup, glass, bottle, plate, or food container
+- door, cabinet, appliance, or shelf
+- floor tile, paving stone, stair, curb, or path width
+- human legs, shoes, hands, or bags
 
-### Step 3: Select Salience Automatically
+Treat the goose as a real medium-sized domestic bird—not a miniature toy and not a mascot.
 
-Use the user's instruction when provided. Otherwise choose automatically.
+### Support-Surface Rule
 
-#### Prominent
+A fully visible goose may appear only when the selected surface has enough plausible physical footprint for its body and feet.
 
-Use when:
+If a full-body goose cannot fit naturally:
 
-- the source is a wide environmental scene
-- there is generous open space
-- the existing scene already contains action or physical interaction
-- the goose can occupy the foreground or middle ground without blocking the focal subject
+- place it farther back on another valid depth plane
+- show it partly hidden behind an existing object
+- let only its head and neck enter from behind or beyond an edge
+- crop part of its body naturally at the image boundary
+- use a doorway, floor gap, path, chair gap, or background opening
 
-Target size: approximately 8-18% of the image's shorter dimension.
+Never shrink the goose into a toy merely to fit an impossible space.
 
-The prank should be immediately readable.
+Never enlarge the goose merely to make the joke more visible.
 
-#### Subtle
+### Visibility Without Scale Cheating
 
-Use when:
+Choose **obvious**, **subtle**, or **hidden** based on composition.
 
-- the source is a portrait, product shot, pet image, interior detail, food image, or composition with a dominant central subject
-- open space is limited
-- the goose should add humor without changing the scene hierarchy
+Control visibility through:
 
-Target size: approximately 3-8% of the image's shorter dimension.
+- placement near or away from the focal path
+- silhouette contrast
+- neck direction and gesture
+- interaction with an existing object
+- partial occlusion
+- foreground, middle-ground, or background depth
+- negative-space use
 
-The goose may be near a corner, behind an object, or interacting with a secondary prop.
+Do not control visibility through unrealistic size.
 
-#### Hidden / Easter Egg
-
-Use when:
-
-- the source is dense, panoramic, architectural, landscape-oriented, solemn, or visually delicate
-- an obvious goose would disrupt the composition
-- the user asks for something hard to notice
-
-Target size: approximately 1-4% of the image's shorter dimension.
-
-Use partial occlusion, distant placement, or an edge-of-frame action, but keep the silhouette identifiable on close inspection.
-
-### Step 4: Integrate Physically
+### Perspective and Contact
 
 The goose must match:
 
-- camera perspective
-- ground plane and scale
-- light direction and softness
-- cast/contact shadow
-- depth of field treatment
-- occlusion order
-- color temperature
-- surface style
+- source perspective and vanishing direction
+- selected depth plane
+- support-surface angle
+- camera height
+- light direction and color temperature
+- local shadow softness
+- depth-of-field treatment
+- overlap and occlusion order
 
-It must look embedded in the scene, not pasted on top.
+Feet must contact the support surface when visible. Add a soft contact shadow appropriate to the scene.
+
+The goose must look as though it was always present in the reconstructed world—not pasted on afterward.
+
+## Goose Placement Engine
+
+### Protect the Main Subject
+
+Do not cover:
+
+- a person's face or essential gesture
+- the primary pet or animal
+- the main product or artwork
+- important text, label, sign, screen, or UI
+- a landmark or key object
+- the central relationship that defines the image
+
+### Natural Entry Points
+
+Prefer:
+
+1. open floor or ground with reliable scale anchors
+2. a path, doorway, cabinet gap, chair gap, shelf opening, or landscape edge
+3. partial occlusion behind furniture, bags, plants, boxes, fences, or architecture
+4. a plausible background location
+5. a cropped edge-of-frame entry when space is limited
+6. a tabletop only when the physical surface genuinely fits a real goose
+
+### Pet Coexistence
+
+When a cat, dog, or other pet is present:
+
+- preserve the pet as the primary animal
+- compare goose scale directly with the pet and nearby furniture
+- use the goose as a secondary intruder
+- do not make the goose arbitrarily larger than the pet for emphasis
+- avoid threatening poses or distress
 
 ## Mischief Selection Engine
 
-The goose's prank must be inferred from objects and opportunities already present in the source image.
+The prank should use an existing secondary object whenever possible.
 
-### Existing-Object-First Rule
+Examples:
 
-Prefer interacting with an existing secondary object:
-
-- carrying away a hat, glove, sock, brush, spoon, key, ribbon, flower, paper, snack, toy, or small tool
-- tugging a loose strap, scarf edge, shoelace, tablecloth corner, cable, hose, ribbon, or plant stem
-- nudging a basket, cup, watering can, ball, sign, cushion, shoe, or small container
+- tugging a loose cable, strap, ribbon, scarf, shoelace, hose, or cloth edge
+- carrying away a sock, glove, key, spoon, brush, toy, paper, flower, snack, or small tool
+- nudging a cup, basket, ball, shoe, cushion, sign, or small container
 - rearranging a tidy row or display
-- hiding behind an object while holding something taken from nearby
-- blocking a path, doorway, wheel, or line of movement
-- peeking from behind furniture while preparing to steal a visible object
-- photobombing a portrait from a plausible depth layer
+- peeking from behind an object while reaching for something nearby
+- blocking a path or doorway
+- lightly photobombing from a plausible depth layer
 
-Do not invent a new prop when an existing one can support the action.
-
-### Minimal-Addition Rule
-
-If the source has no usable prop, the goose may:
-
-- peek from an edge or behind an existing form
-- stand where it lightly interrupts a path or sightline
-- carry one tiny neutral object consistent with the scene, such as a loose leaf, ribbon, napkin, paper scrap, flower, or small sock
-
-Any added prop must be secondary, visually small, and stylistically consistent.
-
-### Tone
-
-Mischief should be:
+Keep the prank:
 
 - harmless
-- dryly comic
+- simple
+- scene-aware
 - physically readable
-- small enough not to overwrite the source narrative
-- plausible within the scene
+- local rather than composition-changing
+- understandable without captions
 
-Never depict the goose causing injury, fire, traffic danger, animal distress, weapon use, serious property damage, or hazardous interference.
+Do not invent a new prop when an existing object can support the joke.
 
 ## Scene-Specific Guidance
 
 ### Portraits
 
-- preserve the person's pose, crop, clothing, and placement
-- keep the goose small and secondary
-- place it near the lower edge, behind a shoulder-level object, beside a chair, near a bag, or tugging a visible loose accessory
-- never cover or substantially alter the face
+- preserve crop, pose, clothes, and face region
+- keep the goose secondary
+- use floor space, furniture gaps, bags, or lower-edge occlusion
+- never place a tiny toy goose on a shoulder unless explicitly requested
 
-### Pets and Animals
+### Pets
 
-- preserve the original animal as the primary subject
-- place the goose as a secondary observer or prankster
-- use a toy, bowl, blanket corner, leash, or nearby object if present
-- avoid aggression or distress between animals
+- preserve the pet's exact pose, markings, and subject priority
+- anchor goose scale against the pet and furniture
+- use a nearby toy, blanket edge, cable, bowl-side object, or bag strap
 
-### Product and Still-Life Images
+### Products and Still Life
 
-- preserve product shape, brand placement, arrangement, and lighting hierarchy
-- place the goose at the base, edge, or behind the arrangement
-- let it steal or nudge only a secondary accessory
-- do not cover labels or deform the main product
+- preserve product shape, label, arrangement, and lighting hierarchy
+- do not block the product
+- use floor/background space or a physically plausible edge location
+- do not shrink a full goose onto a small tabletop
 
-### Food Images
+### Food
 
-- preserve the dish and plating
-- use a tiny goose reaching toward a garnish, napkin, spoon, or loose ingredient
-- do not make the food dirty or grotesque
+- preserve dish and plating
+- use a distant, partially hidden, or edge-entering goose when tabletop space is insufficient
+- keep food clean and appetizing
 
 ### Landscapes and Architecture
 
-- preserve terrain, skyline, buildings, and paths
-- use a distant or partially hidden goose when the scene is visually delicate
-- let it carry a small picnic item, move a doormat, disturb a flower row, or appear at the end of a path
+- preserve skyline, paths, terrain, and buildings
+- use realistic distance scaling
+- a background goose may be small because it is distant, not because it is toy-sized
 
-### Street and Travel Photos
+### Text-Heavy Images, Screens, and UI
 
-- preserve location identity, architecture, vehicles, and people count
-- place the goose on a pavement edge, crossing point, doorway, market stall, or foreground path
-- avoid creating traffic danger
-
-### Text-Heavy Images, Posters, Screens, and UI
-
-- treat important text and interface regions as protected source zones
-- preserve their layout and legibility as much as the editing model permits
-- keep the goose in margins, empty panels, or around nonessential decorative elements
-- do not rewrite, parody, or cover important text unless explicitly requested
+- treat important text and interface regions as protected
+- preserve their layout and legibility as much as possible
+- place the goose in margins or nonessential regions
+- do not rewrite or parody text unless requested
 
 ## Prompt Compiler
 
-Compile one image-editing prompt in four compact sections.
+Compile the image-editing prompt in five compact sections.
 
-### 1. Preservation Lock
+### 1. Source Deconstruction
 
-State explicitly:
+State the three to six decisive spatial facts: subjects, scale relations, axes, depth, overlap, focal hierarchy, lighting, key colors, and protected regions.
 
-- what the source image contains
-- which subjects, count, pose, crop, camera, perspective, colors, and relationships must remain recognizable
-- which protected focal or text regions must not be covered
+### 2. Composition Lock
 
 Include language equivalent to:
 
-> Preserve the original composition, camera, crop, subject placement, and scene identity. Do not remove, duplicate, or replace existing primary subjects.
+> Preserve the original aspect ratio, crop, camera angle, perspective, primary subject placement, depth relationships, and scene identity. Do not move, remove, replace, or duplicate existing primary subjects.
 
-### 2. Global Style Translation
+### 3. Strong Style Reconstruction
 
-Specify:
+Include language equivalent to:
 
-- softly faceted low-poly geometry
-- matte painted materials
-- broad simplified vegetation and textures
-- restrained source-derived palette
-- soft ambient daylight and contact shadows
-- anonymous simplified facial treatment only for people already present
+> Reconstruct the entire image as a strongly recognizable pastoral low-poly storybook world inspired by the broad visual language of Untitled Goose Game: clean simplified object geometry, matte flat-painted surfaces, soft ambient daylight, restrained source-derived countryside colors, broad low-detail forms, clear silhouettes, and dry visual comedy. This must be a full object-level reconstruction, not a subtle filter and not a triangular polygon mosaic.
 
-### 3. Goose Insertion Plan
+### 4. Goose Integration Plan
 
 Specify:
 
 - exactly one goose
-- prominent, subtle, or hidden salience
-- precise depth layer and approximate placement
-- one context-aware harmless prank using an existing object when possible
-- scale, perspective, lighting, occlusion, and contact shadow integration
+- obvious, subtle, or hidden visibility
+- selected depth plane and support surface
+- two scale anchors
+- whether full body fits
+- exact placement and occlusion plan
+- one existing object used for the harmless prank
+- perspective, lighting, shadow, and surface integration
 
-### 4. Hard Constraints
+Include language equivalent to:
+
+> Keep the goose at a physically plausible adult domestic-goose scale relative to the named nearby objects. Never enlarge it for emphasis or shrink it to toy size. If a full body cannot fit naturally, use distance, partial occlusion, or a cropped edge entry instead.
+
+### 5. Negative Constraints
 
 State:
 
-- preserve all primary source subjects
-- do not add new people or unrelated animals
-- do not add extra geese
-- do not cover faces, labels, UI, or focal objects
-- avoid photorealism, realistic feathers, cinematic lighting, thick outlines, anime styling, copied game assets, logos, HUD, and title treatments
+- no extra geese
+- no new reaction characters
+- no scene redesign
+- no altered camera
+- no covered faces, labels, UI, or focal subjects
+- no photorealism
+- no realistic feather texture
+- no glossy 3D
+- no triangular mosaic filter
+- no anime, chibi, or thick outlines
+- no copied game maps, assets, logos, UI, or title treatment
 
 ## Internal Planning Schema
 
@@ -354,17 +439,24 @@ Before generating, determine internally:
 
 ```yaml
 source_scene: photo | illustration | screenshot | poster | other
+decisive_visual_facts: []
 primary_subjects: []
 secondary_subjects: []
-people_present: yes/no
-other_animals_present: yes/no
 protected_regions: []
 camera_and_perspective: ""
 depth_layers: []
+light_direction: ""
+source_color_roles: []
 negative_space_candidates: []
 usable_mischief_props: []
-goose_salience: prominent | subtle | hidden
+goose_visibility: obvious | subtle | hidden
+goose_depth_plane: foreground | middle-ground | background
+goose_support_surface: ""
+goose_scale_anchor_1: ""
+goose_scale_anchor_2: ""
+goose_full_body_fits: yes/no
 goose_placement: ""
+goose_occlusion_plan: ""
 goose_action: ""
 local_changes_only: true
 ```
@@ -373,85 +465,108 @@ Do not expose this schema unless the user asks for the analysis.
 
 ## Workflow
 
-1. Confirm that a usable source image is present in the current conversation.
-2. Inspect the image and build the internal planning schema.
-3. Lock the composition and protected regions.
-4. Select goose salience automatically or follow the user's requested visibility.
-5. Select one harmless prank using an existing object whenever possible.
-6. Compile the four-section editing prompt.
-7. Edit the supplied image using the built-in image-editing capability.
-8. Inspect the result against the Quality Gate.
-9. If the source composition drifted, the goose looks pasted on, or the prank is unreadable, regenerate once with stronger preservation and integration language.
-10. Return the edited image. Provide a short note naming the goose's visibility and prank only when useful or requested.
+1. Confirm a usable source image is present.
+2. Deconstruct the source into decisive visual facts.
+3. Lock composition, subjects, scale relationships, and protected regions.
+4. Plan a strong global pastoral low-poly storybook reconstruction.
+5. Select goose visibility based on composition—not desired image-space size.
+6. Select depth plane, support surface, and at least two scale anchors.
+7. Decide whether a full-body goose physically fits.
+8. Choose one harmless prank using an existing object whenever possible.
+9. Compile the five-section editing prompt.
+10. Edit the supplied image using the built-in image-editing capability.
+11. Inspect the result against the Quality Gate.
+12. Regenerate once with stronger constraints when needed.
+13. Return the edited image. Do not provide a long explanation unless requested.
 
 ## Hard Avoids
 
 Always avoid:
 
-- generating without a usable source image
-- replacing the source image with a newly invented scene
-- changing the original aspect ratio or camera without permission
+- generating without a source image
+- weak style transfer that remains mostly photographic
+- generic painterly, editorial, watercolor, or vector-poster styling replacing the required pastoral low-poly storybook look
+- uniform triangular faceting over the whole photo
+- changing crop, camera, or major composition
 - moving, deleting, duplicating, or redesigning primary subjects
-- inserting more than one goose unless explicitly requested
-- adding a new human reaction character
-- covering faces, product labels, important text, UI, or focal objects
-- making the goose the dominant subject in a close-up portrait or product image
-- harmful, destructive, dangerous, or cruel pranks
-- exact reproduction of a known game's map, character model, screenshot, logo, interface, task list, or title treatment
-- photoreal skin, feathers, fur, texture maps, pores, or high-frequency detail
-- anime, manga, kawaii expressions, chibi anatomy, or thick comic outlines
-- glossy plastic, ray-traced realism, metallic shine, dramatic depth of field, heavy bloom, or cinematic grading
-- replacing the source location with a generic countryside setting
-- adding visible text unless the user requests it
+- more than one goose without explicit request
+- giant mascot goose
+- miniature toy goose
+- full-body goose on a surface too small to support it
+- floating feet or missing contact shadow
+- inconsistent perspective, lighting, or occlusion
+- pasted-on appearance
+- covering faces, labels, text, UI, or focal objects
+- harmful, dangerous, destructive, or cruel pranks
+- exact reproduction of protected game maps, models, UI, screenshots, or branding
 
 ## Quality Gate
 
-### Source Preservation
+### Composition
 
-- Is the source image still immediately recognizable?
-- Are the original crop, camera, perspective, and spatial relationships preserved?
+- Is the source immediately recognizable?
+- Are crop, camera, perspective, focal hierarchy, and spatial relationships preserved?
 - Are primary subject count, placement, pose, and identity cues intact?
-- Are key colors and location identity retained?
-- Are faces, labels, signs, UI, and focal objects unobstructed?
 
-### Goose Integration
+### Style Strength
+
+- Does the image unmistakably read as a pastoral low-poly storybook world?
+- Are objects rebuilt as clean simplified forms rather than merely filtered?
+- Are materials matte and flat-painted?
+- Are colors restrained and source-derived?
+- Is lighting soft and non-cinematic?
+- Are detailed faces and photographic micro-texture removed?
+- Is the result free of uniform triangular mosaic artifacts?
+
+### Goose Scale and Integration
 
 - Is there exactly one goose?
-- Does its prominence fit the available compositional space?
-- Is its scale believable for the selected depth layer?
-- Does it match the scene's perspective, lighting, material style, and shadow softness?
-- Is it naturally occluded where appropriate?
-- Does it look embedded rather than pasted on?
+- Were at least two scale anchors used?
+- Is its adult physical size plausible for the selected depth plane?
+- Does the support surface have enough footprint?
+- If not, was partial occlusion, distance, or edge cropping used instead?
+- Does it match perspective, light, shadow, depth, and occlusion?
+- Is visibility achieved without unrealistic enlargement or shrinking?
+- Does it look native to the scene rather than pasted in?
 
 ### Mischief
 
 - Is one harmless prank readable?
 - Does it use an existing object when possible?
-- Is the local cause-and-effect understandable without captions?
-- Does the prank add humor without replacing the source narrative?
+- Does it add dry humor without replacing the source narrative?
 
-### Style
+### Mandatory Regeneration Conditions
 
-- Are forms simplified and softly faceted?
-- Are surfaces matte rather than glossy?
-- Is the palette restrained while preserving source identity?
-- Are lighting and shadows soft and non-cinematic?
-- Are people simplified only when they already existed?
-- Is the output free of copied maps, protected character designs, HUD, logos, and title treatments?
+Regenerate once if any of the following occurs:
+
+- the result still looks substantially photographic
+- the result becomes a triangular polygon-filter image
+- the pastoral low-poly storybook style is weak or generic
+- the composition or camera changes
+- the goose is too large, too small, floating, or unsupported
+- the goose feels pasted in
+- the prank is unrelated or unreadable
+- a protected subject or label is obscured
+
+## Reference Prompts
+
+Read the detailed prompt guidance before producing the image:
+
+- Chinese: [references/goose-of-mischief-prompt.zh-CN.md](references/goose-of-mischief-prompt.zh-CN.md)
+- English: [references/goose-of-mischief-prompt.en.md](references/goose-of-mischief-prompt.en.md)
 
 ## Output Behavior
 
 Default response:
 
 1. return the edited image
-2. optionally include one concise line, for example: `Subtle goose: hiding behind the chair while pulling away a loose sock.`
+2. optionally include one concise line naming the goose visibility, scale anchors, and prank
 
-Do not provide a long explanation or the full prompt unless the user asks.
+Do not provide the full prompt or internal analysis unless the user asks.
 
 ## Example Requests
 
-- `用 $goose-of-mischief 改造这张照片，鹅明显一点。`
-- `用 $goose-of-mischief 处理这张人物照，构图不要变，鹅藏得隐蔽一些。`
-- `把这张旅行照转换成低多边形绘本质感，并自动放入一只正在捣乱的鹅。`
-- `保留这张猫咪照片的姿势和花纹，让鹅偷偷叼走旁边的玩具。`
-- `处理这张产品图，不要挡住标签，让鹅在角落偷走一条丝带。`
+- `用 $goose-of-mischief 改造这张图片，保留原本构图，并自动判断鹅应该有多明显。`
+- `用 $goose-of-mischief 处理这张猫咪照片，强烈保留低多边形田园绘本风格，鹅的尺寸必须符合真实比例。`
+- `把这张旅行照转换成 Untitled Goose Game 气质的低多边形绘本场景，并让鹅在远处进行一个小恶作剧。`
+- `处理这张产品图，不要挡住标签。如果没有足够空间放完整的鹅，就只让鹅从画面边缘探头。`
