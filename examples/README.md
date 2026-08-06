@@ -1,8 +1,33 @@
 # Example and Acceptance Cases
 
-These cases are intended for manual testing of the skill. Every test requires a source image.
+These cases are intended for manual testing. Every test requires a source image.
 
-## 1. Wide garden scene
+All successful results must satisfy three conditions simultaneously:
+
+1. the source composition remains recognizable
+2. the pastoral low-poly storybook style is strong and immediate
+3. the goose has physically plausible scale, support, perspective, lighting, and occlusion
+
+## 1. Desk, drink, and cat
+
+**Request**
+
+```text
+用 $goose-of-mischief 改造这张图片，保留原本构图，并自动判断鹅应该有多明显。
+```
+
+**Expected behavior**
+
+- Preserve the foreground drink, desk, cable, background cat, cabinets, and camera.
+- Reconstruct the scene using clean object-level low-poly forms and matte flat-painted materials.
+- Do not cover the image with a triangular polygon mosaic.
+- Preserve the cat as the primary animal subject.
+- Use at least two scale anchors, such as the cat, glass, cable connector, cabinet, or tabletop depth.
+- Do not place a full adult goose on the tabletop unless the available surface and perspective can physically support it.
+- Prefer a correctly scaled goose farther back, partly hidden behind the glass or furniture, entering from the lower edge, or extending only its head and neck toward the cable.
+- Visibility may be subtle or medium, but must not be produced by enlarging the goose.
+
+## 2. Wide garden scene
 
 **Request**
 
@@ -13,11 +38,13 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 **Expected behavior**
 
 - Preserve the garden layout, paths, people, plants, and camera.
-- Choose a prominent or medium-prominence goose if open ground is available.
-- Use an existing garden object, such as a glove, watering can, hose, flower, or small tool.
+- Apply a strongly recognizable pastoral low-poly storybook reconstruction.
+- Use open ground, a path, or another valid support plane.
+- Anchor goose scale against paving stones, people, tools, garden furniture, or path width.
+- Use an existing garden object such as a glove, watering can, hose, flower, or small tool.
 - Match the ground plane and cast a soft contact shadow.
 
-## 2. Close portrait
+## 3. Close portrait
 
 **Request**
 
@@ -27,12 +54,14 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 
 **Expected behavior**
 
-- Preserve crop, pose, clothing, and subject placement.
-- Do not cover or substantially alter the face.
-- Use a subtle goose near the bottom edge, beside a chair or bag, or partially behind an object.
-- The prank should use a visible secondary accessory when possible.
+- Preserve crop, pose, clothing, face region, and subject placement.
+- Simplify the person into a faceless low-poly storybook figure without changing the composition.
+- Do not cover the face or essential gesture.
+- Use floor space, a chair gap, bag, doorway, or edge entry.
+- Do not shrink a full goose onto a shoulder, narrow table, or tiny shelf.
+- Use placement and partial occlusion—not toy scale—to keep the goose subtle.
 
-## 3. Pet photo
+## 4. Pet photo
 
 **Request**
 
@@ -42,12 +71,14 @@ Use $goose-of-mischief to transform this image. Decide the goose visibility auto
 
 **Expected behavior**
 
-- Preserve the pet as the primary subject and retain species, markings, and pose.
-- Do not turn the pet into a goose or introduce aggression.
-- Let the goose move a toy, blanket corner, leash, bowl-side object, or another safe prop.
+- Preserve the pet as the primary subject and retain species, markings, pose, and scale.
+- Reconstruct fur and markings as broad matte color regions.
+- Use the pet plus nearby furniture or props as goose scale anchors.
+- Do not arbitrarily make the goose larger than the pet for emphasis.
+- Let the goose move a toy, blanket corner, leash, cable, or another safe existing prop.
 - Keep the interaction playful and non-distressing.
 
-## 4. Product image
+## 5. Product image
 
 **Request**
 
@@ -58,11 +89,13 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 **Expected behavior**
 
 - Preserve product geometry, arrangement, label placement, and lighting hierarchy.
-- Use a subtle goose at the base or edge of the composition.
-- Interact only with a secondary accessory such as ribbon, paper, tag, or packaging insert.
-- Keep important branding and text unobstructed.
+- Strongly reconstruct the surrounding scene in the required low-poly storybook style.
+- Treat the main product and label as protected regions.
+- Use floor or background space when possible.
+- If the surface cannot fit a real goose, show only a partially hidden or edge-entering goose.
+- Never shrink a full goose into a decorative tabletop toy.
 
-## 5. Dense city or travel scene
+## 6. Dense city or travel scene
 
 **Request**
 
@@ -72,12 +105,14 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 
 **Expected behavior**
 
-- Preserve location identity, skyline, buildings, vehicles, and people count.
-- Choose a hidden or distant goose.
-- Place it at a doorway, pavement edge, market stall, path, or behind foreground street furniture.
+- Preserve location identity, skyline, buildings, vehicles, people count, and camera.
+- Use strongly simplified matte low-poly architecture and broad color planes.
+- Choose a distant or partially hidden goose.
+- Scale it using door height, paving, pedestrians, curb width, or street furniture.
+- A small background goose is acceptable only because it is distant.
 - Do not create traffic danger or a new crowd reaction.
 
-## 6. Food image
+## 7. Food image
 
 **Request**
 
@@ -88,11 +123,12 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 **Expected behavior**
 
 - Preserve the dish, plate, framing, and plating.
-- Use a small goose reaching toward a garnish, napkin, spoon, or loose ingredient.
-- Keep the food clean and appetizing.
-- Do not block the main dish.
+- Reconstruct food and tableware as clean matte low-poly forms while keeping them appetizing.
+- Do not place a miniature full-body goose beside a plate.
+- Use a correctly scaled goose on the floor, in the background, partly behind a table edge, or entering with only its head and neck.
+- Let it reach toward a napkin, spoon, or loose safe prop without contaminating the food.
 
-## 7. Text-heavy poster or interface
+## 8. Text-heavy poster, screen, or interface
 
 **Request**
 
@@ -104,20 +140,42 @@ Use $goose-of-mischief on this product image. Do not cover the product or label.
 
 - Treat important text and UI regions as protected zones.
 - Preserve layout and legibility as much as the editing model permits.
-- Put the goose in a margin, empty panel, or nonessential decorative area.
+- Keep the required low-poly storybook style strong in surrounding objects and figures.
+- Put the goose in a margin, empty panel, plausible depth opening, or edge crop.
 - Do not rewrite, cover, or parody important text.
 
-## Failure conditions
+## Style failure conditions
 
-A result fails if any of the following occurs:
+A result fails if:
+
+- the result remains substantially photographic
+- the required pastoral low-poly storybook style is weak or replaced by generic editorial, painterly, watercolor, or vector styling
+- the image is covered by a uniform triangular mosaic or stained-glass polygon filter
+- realistic high-frequency texture remains dominant
+- surfaces become glossy or lighting becomes cinematic
+- the output copies recognizable commercial game assets, maps, UI, or branding
+
+## Composition failure conditions
+
+A result fails if:
 
 - the source image is no longer recognizable
-- the crop, camera, or major composition changes without permission
+- crop, camera, perspective, or major composition changes without permission
 - a primary subject is moved, removed, duplicated, or replaced
-- there is no goose, or there is more than one goose without request
-- the goose covers a face, label, important text, UI, or focal object
-- the goose has incorrect scale, perspective, lighting, occlusion, or shadow
-- the goose appears pasted on rather than embedded
-- the prank is harmful, destructive, aggressive, or impossible to understand
+- a face, pet, product, label, important text, UI, or focal object is obscured
 - the scene is replaced with a generic countryside environment
-- the output copies recognizable commercial game assets, maps, UI, or branding
+
+## Goose failure conditions
+
+A result fails if:
+
+- there is no goose or more than one goose without request
+- no valid support surface is identifiable
+- fewer than two meaningful scale anchors are used
+- the goose is giant, mascot-sized, miniature, or toy-like
+- a full-body goose is forced onto a physically impossible surface
+- visibility is achieved by unrealistic enlargement or shrinking
+- feet float or lack a plausible contact shadow
+- perspective, depth, lighting, occlusion, or color temperature does not match
+- the goose appears pasted on rather than embedded
+- the prank is harmful, destructive, aggressive, unrelated, or impossible to understand
