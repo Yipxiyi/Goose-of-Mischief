@@ -1,0 +1,5 @@
+version: 1
+
+# Add only approved source/result pairs.
+# Each case path should contain source image, transformed result, and meta.yaml.
+cases: []
