@@ -28,8 +28,6 @@ The skill follows five stages:
 4. **Goose integration** — select depth, support surface, scale anchors, occlusion, visibility, and one harmless prank.
 5. **Quality gate** — reject weak styling, polygon-filter artifacts, composition drift, pasted-on placement, or incorrect goose scale.
 
-This workflow adapts the relationship-first prompt architecture used by photo-derived editorial systems, but the final rendering remains strongly pastoral, low-poly, and game-storybook-like.
-
 ## Strong style rules
 
 Use:
@@ -66,6 +64,26 @@ The skill must:
 5. use partial occlusion, distance, or edge cropping when it does not
 
 Visibility is controlled through placement, silhouette, contrast, gesture, interaction, depth, and occlusion—never through unrealistic enlargement or toy-like shrinking.
+
+## Visual reference assets
+
+The repository uses two kinds of visual references:
+
+- `assets/style-anchors/` defines the shared low-poly storybook rendering language, materials, lighting, human treatment, and goose design.
+- `assets/examples/` contains approved source/result pairs demonstrating composition preservation, scale reasoning, occlusion, and prank integration.
+
+An image directory does not improve quality by itself. References must be curated and explicitly used as visual anchors by the skill.
+
+Priority is always:
+
+1. the user's source image and request
+2. source composition, physical scale, and protected regions
+3. `SKILL.md` and detailed prompt rules
+4. visual reference assets
+
+References may teach rendering grammar and transformation behavior only. Never copy their subjects, exact composition, palette, location, or prank.
+
+Maintain four to six excellent cases rather than many average examples. Use only original, purpose-generated, public-domain, or properly licensed images—never private photographs or commercial-game screenshots.
 
 ## Install
 
@@ -106,6 +124,13 @@ Use $goose-of-mischief on this product image. Do not cover the label. If a full 
 ├── references/
 │   ├── goose-of-mischief-prompt.en.md
 │   └── goose-of-mischief-prompt.zh-CN.md
+├── assets/
+│   ├── README.md
+│   ├── style-anchors/
+│   │   └── README.md
+│   └── examples/
+│       ├── README.md
+│       └── manifest.yaml
 ├── examples/
 │   └── README.md
 └── LICENSE
